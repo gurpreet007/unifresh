@@ -24,9 +24,9 @@ Install PHP cURL library
 sudo apt-get install php-curl
 ```
 
-SQL commands for future db change/updates
+Saving SQL commands here for future db change/updates
 ```
-update or insert into templates (id, name, message) values((select coalesce(max(id),0)+1 from templates), 'ppp4', 'pok444kk') matching(name);
+create table templates(id integer primary key, name varchar(50), message varchar(500));
 create unique index customer_index on customermaster(customer);
 create index sales_index on salesheader(orderdate);
 ```
